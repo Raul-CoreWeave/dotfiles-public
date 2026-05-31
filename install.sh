@@ -107,6 +107,7 @@ ensure_dir "$HOME/.claude/commands"
 link "$DOTFILES_DIR/claude/commands/session-id.md"    "$HOME/.claude/commands/session-id.md"
 link "$DOTFILES_DIR/claude/commands/todo.md"          "$HOME/.claude/commands/todo.md"
 link "$DOTFILES_DIR/claude/commands/util.md"          "$HOME/.claude/commands/util.md"
+link "$DOTFILES_DIR/claude/commands/dev.md"           "$HOME/.claude/commands/dev.md"
 ensure_dir "$HOME/.claude/commands/scripts"
 link "$DOTFILES_DIR/claude/commands/scripts/todo.sh"  "$HOME/.claude/commands/scripts/todo.sh"
 
@@ -115,6 +116,8 @@ ensure_dir "$HOME/.claude/hooks"
 link "$DOTFILES_DIR/claude/hooks/check-skill-doc-sync.py"             "$HOME/.claude/hooks/check-skill-doc-sync.py"
 link "$DOTFILES_DIR/claude/hooks/sessionstart-dangling-refs.sh"       "$HOME/.claude/hooks/sessionstart-dangling-refs.sh"
 link "$DOTFILES_DIR/claude/hooks/sessionstart-untracked-versioned.sh" "$HOME/.claude/hooks/sessionstart-untracked-versioned.sh"
+link "$DOTFILES_DIR/claude/hooks/log-bash-command.py"                 "$HOME/.claude/hooks/log-bash-command.py"
+link "$DOTFILES_DIR/claude/hooks/warn-protected-branch-commit.py"     "$HOME/.claude/hooks/warn-protected-branch-commit.py"
 
 # Plugins: portable base + optional private overlay merged, then symlinked.
 # NOTE: known_marketplaces.json is NOT tracked — Claude Code overwrites it via
