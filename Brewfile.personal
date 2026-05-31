@@ -1,0 +1,111 @@
+tap "nikitabobko/tap"
+# Simple, modern, secure file encryption
+brew "age"
+# Improved shell history for zsh, bash, fish and nushell
+brew "atuin"
+# Terminal bandwidth utilization tool
+brew "bandwhich"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Interface bandwidth monitor
+brew "bmon"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
+# New way to see and navigate directory trees
+brew "broot"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Make choices on the command-line
+brew "choose"
+# JSON, YAML, TOML, XML, and CSV query and modification tool
+brew "dasel"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Command-line DNS Client for Humans
+brew "doggo"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# More intuitive version of du in rust
+brew "dust"
+# Modern, maintained replacement for ls
+brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Alternative to top/htop
+brew "glances"
+# Ping, but with a graph
+brew "gping"
+# Kubernetes package manager
+brew "helm"
+# Display an interface's bandwidth usage
+brew "iftop"
+# JQ clone focussed on correctness, speed, and simplicity
+brew "jaq"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Modern and intuitive terminal-based text editor
+brew "micro"
+# 'traceroute' and 'ping' in a single tool
+brew "mtr"
+# Interactive cheatsheet tool for the command-line
+brew "navi"
+# NCurses Disk Usage
+brew "ncdu"
+# Diagnose infrastructure problems with metrics, visualizations & alarms
+brew "netdata"
+# Command-line tool to generate, analyze, convert and manipulate colors
+brew "pastel"
+# Modern replacement for ps written in Rust
+brew "procs"
+# Static type checker for Python
+brew "pyright"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Extremely fast Python linter, written in Rust
+brew "ruff"
+# Intuitive find & replace CLI
+brew "sd"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
+# Command-line packet analyzer
+brew "tcpdump"
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
+# Terminal UI for tshark, inspired by Wireshark
+brew "termshark"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Terminal multiplexer
+brew "tmux"
+# Console-based network traffic monitor
+brew "vnstat"
+# Friendly and fast tool for sending HTTP requests
+brew "xh"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Clipboard manager
+cask "maccy"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Replacement for Docker Desktop
+cask "orbstack"

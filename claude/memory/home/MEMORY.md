@@ -1,0 +1,1 @@
+- [Surface changes made outside the current repo](feedback_surface_external_changes.md) — Always state the absolute path when editing outside the CWD's repo (~/.claude/, ~/dotfiles/, other code repos); end-of-turn recap grouped by location when changes spanned multiple places

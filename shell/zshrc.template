@@ -1,0 +1,61 @@
+# ~/.zshrc TEMPLATE — sanitized, machine-portable copy.
+# Apply on a new machine via bootstrap.sh; do NOT commit a non-template zshrc
+# (the .gitignore excludes shell/zshrc for that reason).
+
+# Auto-dedupe $PATH
+typeset -U path PATH fpath FPATH manpath MANPATH
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git zsh-autosuggestions)
+source $ZSH/oh-my-zsh.sh
+
+# Per-user aliases / functions
+[[ -r ~/.zsh_aliases ]] && source ~/.zsh_aliases
+
+# Corporate CA bundle (optional) — uncomment and point at your combined CA
+# bundle if you're behind a TLS-inspecting proxy and tools fail with
+# "certificate signed by unknown authority". Harmless to leave off otherwise.
+# export NODE_EXTRA_CA_CERTS="$HOME/.certs/ca-bundle.pem"
+# export SSL_CERT_FILE="$HOME/.certs/ca-bundle.pem"
+# export REQUESTS_CA_BUNDLE="$HOME/.certs/ca-bundle.pem"
+
+############ MANUAL ADDS BELOW #################
+
+eval "$(starship init zsh)"
+alias ls='eza'
+alias ll='eza -lh --git'
+alias la='eza -lha --git'
+
+[[ -f "$HOME/.config/broot/launcher/bash/br" ]] && source "$HOME/.config/broot/launcher/bash/br"
+alias cat='bat --paging=never'
+alias ps='procs'
+eval "$(zoxide init zsh --cmd cd)"
+eval "$(thefuck --alias f)"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+alias ff='fastfetch'
+
+# Personal API tokens — sourced from your secret manager of choice.
+# Keep credentials out of the versioned dotfiles; load them from a
+# machine-local, gitignored file instead.
+# [ -f "$HOME/dotfiles/shell/secrets.local.zsh" ] && source "$HOME/dotfiles/shell/secrets.local.zsh"
+
+fastfetch
+
+alias nano=micro
+
+# claude-session — print the current Claude Code session ID and JSONL transcript path
+claude-session() {
+  if [[ -z "$CLAUDE_CODE_SESSION_ID" ]]; then
+    echo "not inside a Claude Code session" >&2
+    return 1
+  fi
+  local path="$(find ~/.claude/projects -name "$CLAUDE_CODE_SESSION_ID.jsonl" 2>/dev/null | head -1)"
+  printf 'session: %s\npath:    %s\n' "$CLAUDE_CODE_SESSION_ID" "$path"
+}
+
+# atuin must init last so its ^R bindkey wins over anything that re-sources widgets
+eval "$(atuin init zsh)"

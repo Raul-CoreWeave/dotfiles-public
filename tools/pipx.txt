@@ -1,0 +1,6 @@
+# pipx tools — installed by bootstrap.sh.
+# Format (tab-separated): <name>\t<source>
+# <source> may be a PyPI package name OR a local path (with $HOME expansion).
+# Local paths require the corresponding repo to be cloned first (see ../repos.txt).
+#
+# (no entries in the public template — add your own)
